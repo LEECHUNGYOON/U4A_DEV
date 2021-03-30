@@ -4,6 +4,7 @@ sap.ui.define("u4a.m.RichEditorTinyMCE", [
 "sap/ui/richtexteditor/RichTextEditor",
 "sap/ui/richtexteditor/RichTextEditorRenderer"
 
+], function(RichTextEditor, RichTextEditorRenderer){
     "use strict";
 
     var EditorStatus = {
