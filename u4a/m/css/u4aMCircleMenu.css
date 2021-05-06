@@ -1,0 +1,175 @@
+﻿/* Circle Menu Css */
+.u4aMCircleMenu * {
+    box-sizing: border-box;
+}
+.u4aMCircleMenu {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: transparent;
+  overflow: hidden;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+}
+.u4aMCircleMenu.u4aMCircleMenuLeft {
+    left: 0%;
+}
+.u4aMCircleMenu.u4aMCircleMenuRight {
+    left: 100%;
+}
+.u4aMCircleMenu.u4aMCircleMenuInactive {
+    width: 120px;
+    height: 120px;
+    /*height: 100px;*/
+}
+.u4aMCircleMenuToggleBtn {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    bottom: 0px;
+    background-color: rgb(83, 174, 248);
+    border-radius: 50%;
+    transition: transform 1.3s;
+    -webkit-transition : transform 1.3s;
+    -moz-transition : transform 1.3s;
+    -ms-transition : transform 1.3s;
+    cursor: pointer;
+    left: 50%;
+    transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+}
+.u4aMCircleMenuToggleBtnIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    cursor: pointer;
+}
+.u4aMCircleMenuListItemArea {
+    position: absolute;
+    background-color: teal;
+    border-radius: 50%;
+    transition: transform .5s;
+    -webkit-transition : transform .5s;
+    -moz-transition : transform .5s;
+    -ms-transition : transform .5s;
+    bottom: -160px;
+    /*bottom: -35%;*/
+    transform: scale(0.1);
+    -webkit-transform : scale(0.1);
+    -moz-transform : scale(0.1);
+    -ms-transform : scale(0.1);
+}
+.u4aMCircleMenuListItemArea.u4aMCircleMenuToggleBtnActive {
+    transform: scale(1) rotate(0deg);
+    -moz-transform: scale(1) rotate(0deg);
+    -webkit-transform: scale(1) rotate(0deg);
+    -ms-transform: scale(1) rotate(0deg);
+    width: 400px;
+    height: 400px;
+}
+.u4aMCircleMenuBlockLayer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgb(250, 119, 180);*/
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    -ms-transition : all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    /* z-index: 9; */
+}
+.u4aMCircleMenuBlockLayer.u4aMCircleMenuBlockLayerActive {
+    visibility: visible;
+    opacity: 1;
+}
+.u4aMCircleMenuCircle {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    list-style: none;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: transform 0.1s;
+    -ms-transition: transform 0.1s;
+    -webkit-transition : transform 0.1s;
+    -moz-transition : transform 0.1s;
+    cursor: pointer;
+}
+.u4aMCircleMenuCircle li {
+    background-color: #fff;
+}
+.u4aMCircleMenuItem {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    transform-origin: 0 100%;
+}
+.u4aMCircleMenuCircle li .u4aMCircleMenuItemPlaceHolder {
+    position: absolute;
+    left: -100%;
+    padding-top: 1.5em;
+    width: 200%;
+    height: 200%;
+    text-align: center;
+    transform: skewY(55deg) rotate(17deg);
+    -webkit-transform : skewY(55deg) rotate(17deg);
+    -moz-transform : skewY(55deg) rotate(17deg);
+    -ms-transform : skewY(55deg) rotate(17deg);
+    pointer-events: none;
+}
+.u4aMCircleMenuItem {
+    cursor: pointer;
+}
+.u4aMCircleMenuItemIcon {
+    cursor: pointer;
+}
+.u4aMCircleMenuCircle *, .u4aMCircleMenuItemIcon {
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select:none;
+}
+.u4aMCircleMenuItemLabel {
+    margin-top: 10px;
+    cursor: pointer;
+    color: #6a6d70;
+}
+.u4aMCircleMenuItemLink {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+.u4aMCircleMenuItemLink {
+    text-decoration: none;
+    pointer-events: auto;
+}
+.u4aMCircleMenuItemUpside {
+    display: inline-flex;
+}

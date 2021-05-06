@@ -1,0 +1,1 @@
+﻿sap.ui.define("u4a.m.CircleMenuItem",["sap/ui/core/Element"],function(e){"use strict";return e.extend("u4a.m.CircleMenuItem",{metadata:{library:"u4a.m",properties:{icon:{type:"sap.ui.core.URI",defaultValue:null},description:{type:"string",defaultValue:null}}}})});
