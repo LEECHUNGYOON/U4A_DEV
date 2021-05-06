@@ -31,7 +31,8 @@
     width: 120px;
     height: 120px;
     bottom: 0px;
-    background-color: rgb(83, 174, 248);
+    /*background-color: rgb(83, 174, 248);*/
+    background-color: #0a6ed1;
     border-radius: 50%;
     transition: transform 1.3s;
     -webkit-transition : transform 1.3s;
