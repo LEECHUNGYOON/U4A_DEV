@@ -47,7 +47,7 @@ sap.ui.define("u4a.m.CircleMenu", [
             this._iBeforeRotateX = 0;
 
             // 원형 메뉴 초기 각도
-            this._iInitDegreeStart = 270;
+            this._iInitDegreeStart = 255;
 
             // 각 메뉴의 각도 gap
             this._iDegreeGap = 36;
