@@ -59,10 +59,12 @@ sap.ui.define("u4a.m.CircleMenu", [
             var sId = oCircleMenu.getId(),
                 oPop = oCircleMenu.getAggregation("_popup"),
                 iNextZindex = oPop.getNextZIndex(),
-                sIconSrc = (oCircleMenu.getExpanded() == false ? "sap-icon://menu2" : "sap-icon://decline"),
+                sIconSrc = (oCircleMenu.getExpanded() == false ? "sap-icon://menu2" : "sap-icon://decline");
 
-                oToggleBtnIcon = new Icon(sId + "-ToggleBtnIcon", { src: sIconSrc });
-                oToggleBtnIcon.addStyleClass("u4aMCircleMenuToggleBtnIcon");
+                oCircleMenu._oToggleBtnIcon = new Icon({ src: sIconSrc });
+				
+                //oToggleBtnIcon = new Icon(sId + "-ToggleBtnIcon", { src: sIconSrc });
+                oCircleMenu._oToggleBtnIcon.addStyleClass("u4aMCircleMenuToggleBtnIcon");
 
             oRm.openStart("div", oCircleMenu);
             oRm.class("u4aMCircleMenu");
@@ -96,7 +98,7 @@ sap.ui.define("u4a.m.CircleMenu", [
             oRm.openStart("div", sId + "-ToggleBtnIconArea");
             oRm.openEnd();
 
-            oRm.renderControl(oToggleBtnIcon);
+            oRm.renderControl(oCircleMenu._oToggleBtnIcon);
 
             oRm.close("div"); // end of ToggleBtnIconArea
 
@@ -498,7 +500,8 @@ sap.ui.define("u4a.m.CircleMenu", [
                 sBlockLayerId = sId + "-BlockLayer",
 
                 oToggleBtn = document.getElementById(sToggleBtn),
-                oToggleBtnIcon = sap.ui.getCore().byId(sToggleBtnIconId),
+                oToggleBtnIcon = this._oToggleBtnIcon,
+                //oToggleBtnIcon = sap.ui.getCore().byId(sToggleBtnIconId),
                 oListItemArea = document.getElementById(sListItemId),
                 oBlockLayer = document.getElementById(sBlockLayerId);
 
@@ -575,6 +578,8 @@ sap.ui.define("u4a.m.CircleMenu", [
         _KeydownEventHandle : function(oEvent){
 
             if(event.keyCode == 9){
+				// 커서 포커스 해제
+				document.activeElement.blur();
                 event.preventDefault();
                 event.stopPropagation();
                 return false;
